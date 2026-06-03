@@ -6,42 +6,57 @@
     <title>Pharmaceutical Innovation Advisory | Portfolio</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 15px; }
         
-        /* Updated Header Layout */
+        /* Modern Header Layout */
         header { 
             display: flex; 
             align-items: center; 
             justify-content: space-between; 
-            padding: 30px 40px; 
+            padding: 20px; 
             background: white; 
             border-radius: 8px; 
-            margin-bottom: 30px; 
+            margin-bottom: 20px; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            flex-wrap: wrap; /* Allows stacking on small screens */
+            gap: 15px;
         }
-        .header-left { flex: 0 0 auto; }
-        .header-center { flex: 1; text-align: center; padding: 0 20px; }
-        .header-right { flex: 0 0 auto; }
+        .header-left, .header-right { flex: 0 0 auto; display: flex; justify-content: center; }
+        .header-center { flex: 1; text-align: center; min-width: 250px; }
         
-        .logo { max-width: 180px; display: block; }
-        .profile-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #004a99; display: block; }
+        .logo { max-width: 150px; }
+        .profile-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #004a99; }
         
-        .header-center h1 { color: #004a99; font-size: 1.8em; margin-bottom: 5px; }
-        .header-center h2 { font-size: 1.2em; color: #555; margin-bottom: 5px; }
-        .header-center p { font-size: 1em; color: #777; }
+        .header-center h1 { color: #004a99; font-size: 1.5em; margin-bottom: 5px; }
+        .header-center h2 { font-size: 1.1em; color: #555; }
+        .header-center p { font-size: 0.9em; color: #777; }
 
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1200px; margin: auto; }
-        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 20px; transition: transform 0.3s ease; }
-        .card:hover { transform: translateY(-5px); }
+        /* Responsive Grid */
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px; 
+            max-width: 1200px; 
+            margin: auto; 
+        }
+        .card { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .card h3 { color: #004a99; margin-bottom: 15px; border-bottom: 2px solid #e1e1e1; padding-bottom: 10px; }
         .card ul { list-style-type: none; padding-left: 10px; }
-        .card li { margin-bottom: 10px; }
+        .card li { margin-bottom: 10px; font-size: 0.95em; }
         
-        .contact-info { text-align: center; margin-top: 50px; padding: 30px; background: #fff; border-radius: 8px; }
+        .contact-info { text-align: center; margin-top: 40px; padding: 20px; background: #fff; border-radius: 8px; }
         .linkedin-link { margin-top: 15px; font-weight: bold; color: #0077b5; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; }
         .linkedin-icon { width: 24px; height: 24px; }
         
-        footer { text-align: center; margin-top: 30px; font-size: 0.9em; color: #777; }
+        footer { text-align: center; margin-top: 30px; font-size: 0.8em; color: #777; }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 600px) {
+            header { flex-direction: column; text-align: center; }
+            .header-center { order: 1; }
+            .header-left { order: 2; }
+            .header-right { order: 3; }
+        }
     </style>
 </head>
 <body>
@@ -64,19 +79,19 @@
     <div class="card">
         <h3>Drug Discovery and Development</h3>
         <ul>
-            <li><strong>a.</strong> Evaluating the development feasibility of academic and startup drug discovery projects, ensuring scientific and commercial viability.</li>
-            <li><strong>b.</strong> Selecting appropriate therapeutic indications and designing comprehensive drug development plans.</li>
-            <li><strong>c.</strong> Selecting, auditing, and managing CROs for efficient project execution, including review of protocols and reports.</li>
-            <li><strong>d.</strong> Providing due diligence and support for in-licensing and out-licensing activities to maximize project success and value.</li>
+            <li><strong>a.</strong> Evaluating the development feasibility of academic and startup drug discovery projects.</li>
+            <li><strong>b.</strong> Selecting therapeutic indications and designing development plans.</li>
+            <li><strong>c.</strong> Selecting, auditing, and managing CROs for efficient project execution.</li>
+            <li><strong>d.</strong> Due diligence and support for in-licensing and out-licensing.</li>
         </ul>
     </div>
     <div class="card">
         <h3>Formulation Development, CMC and Drug Delivery</h3>
         <ul>
             <li><strong>a.</strong> Development of new pharmaceutical products and dosage forms.</li>
-            <li><strong>b.</strong> Formulation development of new molecules to support preclinical and clinical studies.</li>
-            <li><strong>c.</strong> Drug delivery system for bioavailability enhancement and controlled release formulation.</li>
-            <li><strong>d.</strong> Specific expertise in the formulation of poorly soluble drugs.</li>
+            <li><strong>b.</strong> Formulation development for preclinical and clinical studies.</li>
+            <li><strong>c.</strong> Bioavailability enhancement and controlled release.</li>
+            <li><strong>d.</strong> Specific expertise in poorly soluble drugs.</li>
         </ul>
     </div>
     <div class="card">
